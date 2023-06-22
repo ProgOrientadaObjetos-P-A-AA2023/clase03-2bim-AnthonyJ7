@@ -11,6 +11,7 @@ package herencia2;
  * @author reroes
  */
 public class Estudiante extends Persona{
+    
     private double matricula;
     
     public Estudiante(String n, String a, int e, double mat){

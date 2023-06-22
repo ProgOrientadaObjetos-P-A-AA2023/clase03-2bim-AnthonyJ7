@@ -5,22 +5,31 @@
  */
 package paquete06;
 
-public class EstudiantePresencial extends Estudiante{
+public class EstudiantePresencial extends Estudiante {
+
     /*1.  Declarar
         numeroCreditos: Entero 
         costoCredito: Real 
-        */
+     */
     int numeroCreditos;
     double costoCredito;
-   
+
+    public EstudiantePresencial(String nombre, String apellido, String id,
+            int edad, int na, double ca) {
+
+        super(nombre, apellido, id, edad);
+        numeroCreditos = na;
+        costoCredito = ca;
+    }
+
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
-    public void establecerNumeroCreditos(int numero){
+    public void establecerNumeroCreditos(int numero) {
         numeroCreditos = numero;
     }
-    
+
     // 3.  Método establecerCostoCredito(valor: Real)
-    public void establecerCostoCredito(double valor){
+    public void establecerCostoCredito(double valor) {
         costoCredito = valor;
     }
 
@@ -28,19 +37,30 @@ public class EstudiantePresencial extends Estudiante{
     // Se implementa el método abstracto declarado en la superclase,
     // bajo las condiciones propias de la subclase
     @Override
-    public void calcularMatricula(){
+    public void calcularMatricula() {
         matricula = numeroCreditos * costoCredito;
     }
 
     //  Métodos obtener para los datos o atributos de la clase
     // 5. Método obtenerNumeroCreditos() : Entero
-    public int obtenerNumeroCreditos(){
-        return numeroCreditos; 
+    public int obtenerNumeroCreditos() {
+        return numeroCreditos;
     }
 
     // 6. Método obtenerCostoCredito() : Real
-    public double obtenerCostoCredito(){
+    public double obtenerCostoCredito() {
         return costoCredito;
     }
-    
+
+    @Override
+    public String toString() {
+        String cadena = String.format("Estudiante Presencial:\nNombres: %s\n"
+                + "Apellidos: %s\nIdentificacion: %s\nEdad: %d\nNumero "
+                + "Creditos: %d\nCosto de Creditos: %.2f\nCosto de "
+                + "Matricula: %.2f\n",
+                nombresEstudiante, apellidosEstudiante, identificacionEstudiante,
+                edadEstudiante, numeroCreditos, costoCredito, matricula);
+        return cadena;
+    }
+
 }

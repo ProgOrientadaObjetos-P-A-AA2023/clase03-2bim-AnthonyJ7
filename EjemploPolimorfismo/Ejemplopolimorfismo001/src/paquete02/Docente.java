@@ -21,7 +21,11 @@ public abstract class Docente {
         return nombre;
     }
     
-    public abstract void obtenerSueldo(double d){
+    /*public abstract void obtenerSueldo(double d){
         sueldo = d;
-    }
+    }*/
+    
+    // el metodo va declarado unicamente
+    
+    public abstract void obtenerSueldo();
 }

@@ -5,10 +5,30 @@
  */
 package herencia4;
 
+import herencia2.Docente;
+import java.util.ArrayList;
+
 /**
  *
  * @author reroes
  */
 public class Reporte {
+    
    protected String codigo;
+   
+   public Reporte(String cod){
+       
+       codigo = cod;
+
+    }
+
+    public void establecerCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String obtenerCodigo() {
+        return codigo;
+    }
+   
+   
 }
